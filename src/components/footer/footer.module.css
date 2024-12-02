@@ -1,0 +1,188 @@
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .contact, .links, .newsletter {
+    flex: 1;
+  }
+  
+  .contact h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .contactItem {
+    margin: 10px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .socialIcons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .socialIcon {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .socialIcon:hover {
+    color: #007bff;
+  }
+  
+  .sectionTitle {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .linkList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .linkList li {
+    margin: 10px 0;
+  }
+  
+  .linkList a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .linkList a:hover {
+    color: #007bff;
+  }
+  
+  .newsletterForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+  }
+  
+  .sendButton, .downloadButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sendButton:hover, .downloadButton:hover {
+    background-color: #0056b3;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .contact,
+    .links,
+    .newsletter {
+      margin-bottom: 20px;
+      flex: unset;
+    }
+  
+    .links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .links div {
+      margin-bottom: 20px;
+      min-width: 200px;
+    }
+  
+    .socialIcons {
+      justify-content: center;
+      margin-top: 15px;
+    }
+  
+    .newsletterForm {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .input {
+      width: 100%;
+    }
+  
+    .sendButton,
+    .downloadButton {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sectionTitle {
+      font-size: 16px;
+    }
+  
+    .contactItem {
+      font-size: 14px;
+    }
+  
+    .linkList a {
+      font-size: 14px;
+    }
+  
+    .socialIcon {
+      font-size: 18px;
+    }
+  
+    .sendButton,
+    .downloadButton {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .newsletterForm {
+      width: 100%;
+    }
+  
+    .input {
+      padding: 10px;
+    }
+  }
+  

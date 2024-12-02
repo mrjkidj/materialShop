@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@1,300&family=Revalia&family=Roboto:wght@500&display=swap');
+
+
+h1{
+    font-family: "Revalia", sans-serif;
+    font-size: 20px;
+ }
+
+
+
+.Contacts {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contactInformation {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+
+.contactDetails {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.contactInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    min-width: 400px;
+}
+
+.titleContact {
+    color: rgb(0, 0, 0);
+
+    margin-bottom: 10px;
+}
+
+.contactIcon {
+    display: flex;
+    align-items: center;
+    font-size: 80px;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.contactIcon a {
+    margin: 0 20px;
+    color: rgb(0, 0, 0);
+}
+
+.geolocation {
+    margin-top: 5px;
+    width: 800px; 
+    height: 600px;
+    border-radius: 8px;
+    flex-shrink: 0; 
+}
+
+
+
+/* Для планшетов (768px и меньше) */
+@media (max-width: 768px) {
+    .Contacts {
+        padding: 10px; /* Уменьшаем отступы */
+        flex-direction: column; /* Переключаем на вертикальный макет */
+        align-items: center;
+    }
+
+    .contactInformation {
+        font-size: 30px; /* Уменьшаем размер заголовка */
+        margin-bottom: 30px; /* Уменьшаем отступ снизу */
+    }
+
+    .contactDetails {
+        gap: 20px; /* Уменьшаем отступ между секциями */
+    }
+
+    .contactInfoContainer {
+        width: 100%; /* Растягиваем на всю ширину */
+        min-width: unset; /* Сбрасываем минимальную ширину */
+    }
+
+    .contactIcon {
+        font-size: 60px; /* Уменьшаем размер иконок */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+        gap: 10px; /* Уменьшаем расстояние между иконками */
+    }
+
+    .geolocation {
+        width: 100%; /* Карта занимает всю ширину */
+        height: 400px; /* Устанавливаем фиксированную высоту */
+    }
+}
+
+/* Для телефонов (480px и меньше) */
+@media (max-width: 480px) {
+    .Contacts {
+        padding: 5px; /* Еще больше уменьшаем отступы */
+    }
+
+    .contactInformation {
+        font-size: 25px; /* Еще меньше размер заголовка */
+        margin-bottom: 20px; /* Уменьшаем отступ снизу */
+    }
+
+    .contactDetails {
+        gap: 10px; /* Уменьшаем отступ между секциями */
+    }
+
+    .contactIcon {
+        font-size: 50px; /* Уменьшаем размер иконок еще больше */
+        padding: 5px; /* Еще меньше внутренние отступы */
+        gap: 5px; /* Уменьшаем расстояние между иконками */
+    }
+
+    .geolocation {
+        height: 250px;
+    }
+}

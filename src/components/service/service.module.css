@@ -1,0 +1,273 @@
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 80px;
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.container__service {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0 0 0px;
+}
+
+.service__title, .software__title, .review__title {
+    margin: 70px;
+}
+
+.block {
+    width: 400px;
+    height: 210px;
+    border: 1px solid red;
+}
+
+.softwareBlock1 {
+    width: 560px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    background: #5F6455;
+    color: white;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.softwareBlock2 {
+    width: 560px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    background: #F9F5ED;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgSoftware1 {
+    margin-top: 200px;
+}
+
+.Software {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.elementsSoftBlock1, .elementsSoftBlock2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: start;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.container__card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.review h2 {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.review h6 {
+    font-size: 0.9em;
+    color: #888;
+    margin: 5px 0;
+}
+
+.review p {
+    font-size: 0.95em;
+    color: #333;
+    text-align: start;
+    font-style: italic;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.review__btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .container__service {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .block {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .Software {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .softwareBlock1, .softwareBlock2 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .elementsSoftBlock1, .elementsSoftBlock2 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .imgSoftware1 {
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .container__card {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .review {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .review img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .review__btns {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .container__service {
+        gap: 10px;
+    }
+
+    .block {
+        padding: 10px;
+    }
+
+    .Software {
+        gap: 20px;
+    }
+
+    .elementsSoftBlock1, .elementsSoftBlock2 {
+        margin: 10px 0;
+    }
+
+    .container__card {
+        gap: 10px;
+    }
+
+    .review {
+        padding: 10px;
+    }
+
+    .review img {
+        width: 50px;
+        height: 50px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}

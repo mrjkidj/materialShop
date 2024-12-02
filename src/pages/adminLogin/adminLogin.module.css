@@ -1,0 +1,155 @@
+/* Основной контейнер */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1c1e22; /* Темно-серый фон */
+    padding: 20px;
+    animation: fadeIn 1.2s ease-in-out; /* Анимация появления */
+  }
+  
+  /* Карточка формы */
+  .formCard {
+    background-color: #292c33; /* Глубокий серый с голубым оттенком */
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Легкая тень для объема */
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    opacity: 0; /* Скрыто изначально */
+    transform: translateY(30px); /* Начальная позиция */
+    animation: slideUp 0.8s ease-out forwards; /* Анимация появления */
+  }
+  
+  /* Заголовок формы */
+  .formTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Белый текст */
+    animation: fadeInTitle 1s ease-in-out forwards;
+  }
+  
+  /* Поля ввода */
+  .input {
+    width: 100%;
+    background-color: #1c1e22; /* Темно-серый фон для полей ввода */
+    color: #ffffff; /* Белый текст */
+    border: 1px solid #444851; /* Серая граница */
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .input::placeholder {
+    color: #999999; /* Светло-серый текст подсказки */
+  }
+  
+  .input:focus {
+    border-color: #4a90e2; /* Голубой оттенок для фокуса */
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6); /* Легкое свечение на фокусе */
+    transform: scale(1.02); /* Увеличение на фокусе */
+  }
+  
+  /* Кнопка отправки */
+  .button {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* Белый текст */
+    background-color: #4a90e2; /* Голубой оттенок */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.3s ease;
+  }
+  
+  .button:disabled {
+    background-color: #444851; /* Темно-серый для заблокированной кнопки */
+    cursor: not-allowed;
+  }
+  
+  .button:hover:not(:disabled) {
+    background-color: #357abf; /* Темнее для ховера */
+    transform: translateY(-3px); /* Легкое поднятие */
+    box-shadow: 0 6px 15px rgba(53, 122, 191, 0.4); /* Тень при наведении */
+  }
+  
+  .button:active:not(:disabled) {
+    transform: scale(0.98); /* Эффект нажатия */
+  }
+  
+  /* Сообщение об ошибке */
+  .errorMessage {
+    color: #ff4d4f; /* Красный текст для ошибок */
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+    animation: fadeInError 0.5s ease-in-out; /* Анимация появления ошибок */
+  }
+  
+  /* Анимации */
+  
+  /* Анимация плавного появления формы */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Анимация плавного подъема формы */
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Анимация появления заголовка */
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Анимация появления ошибок */
+  @keyframes fadeInError {
+    0% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .formCard {
+      padding: 20px 30px;
+    }
+  
+    .formTitle {
+      font-size: 20px;
+    }
+  }
+  

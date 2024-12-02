@@ -1,0 +1,174 @@
+/* Основной контейнер */
+.container {
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.title_furniture {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.h2__title {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 36px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+
+.productCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; 
+    justify-content: center;
+}
+
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+.product__search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search__input {
+    width: 300px;
+    height: 45px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search__button {
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search__button:hover {
+    background-color: #555;
+}
+
+
+.product__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.product__categories button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product__categories button:hover {
+    background-color: #555;
+}
+
+.product__categories button:active {
+    transform: scale(0.95);
+}
+
+
+.productCard {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 1024px) {
+    .search__input {
+        width: 250px;
+    }
+
+    .product__categories button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .productCard {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .search__input {
+        width: 200px;
+    }
+
+    .product__categories {
+        gap: 5px;
+    }
+
+    .product__categories button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .productCard {
+        width: 180px;
+    }
+
+    .h2__title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search__input {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .productCard {
+        width: 150px;
+    }
+
+    .product__categories button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .h2__title {
+        font-size: 24px;
+    }
+}

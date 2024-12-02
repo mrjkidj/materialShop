@@ -1,0 +1,214 @@
+/* Основной контейнер для админ-панели */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Для размещения кнопки "Выйти" */
+    min-height: 100vh;
+    background-color: #1c1e22; /* Темно-серый фон */
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1.2s ease-in-out; /* Анимация плавного появления */
+  }
+  
+  /* Заголовок админ-панели */
+  .adminTitle {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff; /* Белый текст */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Кнопка "Выйти" */
+  .logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #e74c3c; /* Красный цвет */
+    color: #ffffff; /* Белый текст */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .logoutButton:hover {
+    background-color: #c0392b; /* Темнее для ховера */
+    transform: translateY(-2px); /* Легкий подъем */
+  }
+  
+  .logoutButton:active {
+    transform: scale(0.98); /* Эффект нажатия */
+  }
+  
+  /* Кнопка "Добавить продукт" */
+  .addProductButton {
+    background-color: #4a90e2; /* Голубой цвет */
+    color: #ffffff; /* Белый текст */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .addProductButton:hover {
+    background-color: #357abf; /* Темнее для ховера */
+    transform: translateY(-2px); /* Легкий подъем */
+  }
+  
+  .addProductButton:active {
+    transform: scale(0.98); /* Эффект нажатия */
+  }
+  
+  /* Форма добавления продукта */
+  .addProductForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #292c33; /* Глубокий серый с голубым оттенком */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .addProductForm input,
+  .addProductForm textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1c1e22;
+    color: #ffffff; /* Белый текст */
+    border: 1px solid #444851; /* Темно-серая граница */
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .addProductForm input:focus,
+  .addProductForm textarea:focus {
+    border-color: #4a90e2; /* Голубая подсветка */
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.6);
+  }
+  
+  .addProductForm button {
+    background-color: #4a90e2; /* Голубой цвет */
+    color: #ffffff; /* Белый текст */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .addProductForm button:hover {
+    background-color: #357abf; /* Темнее для ховера */
+    transform: translateY(-2px);
+  }
+  
+  .addProductForm button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Контейнер для списка продуктов */
+  .productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  /* Карточка продукта */
+  .productCard {
+    background-color: #292c33; /* Глубокий серый */
+    color: #ffff; /* Белый текст */
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .productCard img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .productCard h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #1c1e22;
+  }
+  
+  .productCard p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #9ea3aa; 
+  }
+  
+  /* Кнопки для управления продуктом */
+  .productCard button {
+    background-color: #4a90e2; /* Голубой цвет */
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+  }
+  
+  .productCard button:hover {
+    background-color: #357abf;
+  }
+  
+  .productCard button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Анимации */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .addProductForm {
+      padding: 15px;
+    }
+  
+    .productCard {
+      width: 100%;
+    }
+  
+    .addProductButton,
+    .logoutButton {
+      width: 100%;
+    }
+  }
+  
